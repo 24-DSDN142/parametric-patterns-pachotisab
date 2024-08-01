@@ -7,6 +7,14 @@ let s =  15;
 let bx = 50;
 let by = 75;
 
+const bodyC = '#dcc8a0';
+const bandC = '#b4a064';
+const decorC = '#968246';
+const beanC = '#734420db';
+const lidC = '#ffffff';
+const dropC = '#614016';
+const beanL = '#482514';
+
 const xArray = [
   x-(2*s), x+(2*s),x+(1.5*s),x-(1.5*s),                        //0-3 cup body
   x-(2*s+s/15),x+(2*s+s/15),x+(1.5*s+s/3),x-(1.5*s+s/3),       //4-7 band
@@ -113,7 +121,7 @@ function drawCup() {
   if(angleBody==0){
     drawDrop(dropX+50,dropY-125,dropW,dropH);
   }
-  fill(220,200,160);   
+  fill(bodyC);   
   push(); 
   rotate(angleBody);
   beginShape();                               //body
@@ -123,7 +131,7 @@ function drawCup() {
   vertex(xArray[3],yArray[3]);
   endShape(CLOSE);
 
-  fill(180,160,100);    
+  fill(bandC);    
   beginShape();                               //body band
   vertex(xArray[4],yArray[4]);
   vertex(xArray[5],yArray[5]);
@@ -131,12 +139,12 @@ function drawCup() {
   vertex(xArray[7],yArray[7]);
   endShape(CLOSE);
 
-  fill(150,130,70);
+  fill(decorC);                         //band decoration
   ellipse(xArray[4]+(0.5*(xArray[5]-xArray[4])),yArray[5]+(0.5*(yArray[6]-yArray[5])),s,s/2);
   pop();
 
   if(lid == true){
-  fill(255);
+  fill(lidC);
   push();
   rotate(angleLid)
   beginShape();                                //lid top
@@ -158,7 +166,7 @@ function drawCup() {
 }
 
 function drawDrop(dX,dY,dW,dH){
-fill(97, 64, 22);
+fill(dropC);
 ellipse(dX,dY,dW,dH);
 
 }
@@ -166,9 +174,9 @@ ellipse(dX,dY,dW,dH);
 function drawBean(bean){
   push();
   rotate(bean);
-  fill(115, 68, 32,200);
+  fill(beanC);
   ellipse(bx,by,30,40);
-  fill(72,37,20);
+  fill(beanL);
   rect(bx,by-20,1,40,200);
   pop();
 }

@@ -36,7 +36,7 @@ let lid = true;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
   angleMode(DEGREES);
 
@@ -81,7 +81,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     }
     dropX = xArray[1] - 15;
     dropY = yArray[1] + 55;
-    drawDrop(dropX,dropY,dropW,dropH);
+    
 
   }else if (angleBody==45){
     lid = true;
@@ -92,7 +92,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
       yArray[i] = Yn +25;
     }
     
-    //drawDrop(dropX,dropY,dropW,dropH); cup 4
+    
   }else if (angleBody==0){
     lid = false;
      for(let i = 8;i<16;i++){

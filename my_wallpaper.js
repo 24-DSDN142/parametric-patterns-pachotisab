@@ -130,6 +130,9 @@ function drawCup() {
   vertex(xArray[6],yArray[6]);
   vertex(xArray[7],yArray[7]);
   endShape(CLOSE);
+
+  fill(150,130,70);
+  ellipse(xArray[4]+(0.5*(xArray[5]-xArray[4])),yArray[5]+(0.5*(yArray[6]-yArray[5])),s,s/2);
   pop();
 
   if(lid == true){
